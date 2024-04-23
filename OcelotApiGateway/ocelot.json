@@ -1,0 +1,63 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/Product/all",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "bachelor-chemicals",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Product"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Product/{id}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "/api/Product/{id}",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Product/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Product/{action}",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "/api/Product/{id}",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Product/{action}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Auth/{action}",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "bachelor-auth",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Auth/{action}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:8000"
+  }
+}
