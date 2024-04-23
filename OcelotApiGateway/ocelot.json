@@ -12,7 +12,7 @@
           "Port": 80
         }
       ],
-      "DownstreamPathTemplate": "/api/Product"
+      "DownstreamPathTemplate": "/api/Product/all"
     },
     {
       "UpstreamPathTemplate": "/api/Product/{id}",
@@ -55,6 +55,76 @@
         }
       ],
       "DownstreamPathTemplate": "/api/Auth/{action}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/WarningSentence/all",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "bachelor-ws",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/WarningSentence/all"
+    },
+    {
+      "UpstreamPathTemplate": "/api/WarningSentence/{id}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "bachelor-ws",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/WarningSentence/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/WarningSentence/{action}",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "bachelor-ws",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/WarningSentence/{action}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/WarningSentence/update/{id}",
+      "UpstreamHttpMethod": [
+        "Put"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "bachelor-ws",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/WarningSentence/update/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/WarningSentence/delete/{id}",
+      "UpstreamHttpMethod": [
+        "Delete"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "bachelor-ws",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/WarningSentence/delete/{id}"
     }
   ],
   "GlobalConfiguration": {
