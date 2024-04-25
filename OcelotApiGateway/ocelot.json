@@ -43,6 +43,20 @@
       "DownstreamPathTemplate": "/api/Product/{action}"
     },
     {
+      "UpstreamPathTemplate": "/api/Product/add-warning-sentence",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "/api/Product/{id}",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Product/add-warning-sentence"
+    },
+    {
       "UpstreamPathTemplate": "/api/Auth/{action}",
       "UpstreamHttpMethod": [
         "Post"
